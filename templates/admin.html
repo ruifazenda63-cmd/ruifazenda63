@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>Painel Admin</title>
+
+<style>
+
+body{
+background:#111827;
+color:white;
+font-family:Arial;
+padding:30px;
+}
+
+table{
+width:100%;
+border-collapse:collapse;
+background:#1f2937;
+}
+
+th,td{
+padding:15px;
+border:1px solid #374151;
+}
+
+th{
+background:#2563eb;
+}
+
+h1{
+color:#38bdf8;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<h1>Painel Admin TELTEC</h1>
+
+<table>
+
+<tr>
+<th>ID</th>
+<th>Serial</th>
+<th>HWID</th>
+<th>Ativo</th>
+<th>Expiração</th>
+</tr>
+
+{% for l in licencas %}
+
+<tr>
+<td>{{l[0]}}</td>
+<td>{{l[1]}}</td>
+<td>{{l[2]}}</td>
+<td>{{l[3]}}</td>
+<td>{{l[4]}}</td>
+</tr>
+
+{% endfor %}
+
+</table>
+
+</body>
+</html>
